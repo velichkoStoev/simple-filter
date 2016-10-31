@@ -9,6 +9,8 @@ Available filters:
 - min_decomposition
 - max_decomposition
 
+![](http://i.imgur.com/En6iQGq.jpg)
+
 ## Install
 1. *(optional)* Consider using  [virtualenv](https://virtualenv.pypa.io/en/stable/) and [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/).
 2. Install [Pillow](https://python-pillow.org/) by running `pip install Pillow`.
