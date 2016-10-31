@@ -1,3 +1,5 @@
+import os
+
 class ImageFilter(object):
 
   def __init__(self, image, filter_name):
@@ -26,7 +28,7 @@ class ImageFilter(object):
         image_pixels[x,y] = tuple([filtered_pixel_value] * 3)
 
   def saveImage(self):
-    image_name, image_format = self.image.filename.split('.')
+    image_name, image_format = os.path.basename(self.image.filename).split('.')
     self.image.save("%s-after-%s.%s" % (image_name, self.filter_name, image_format))
 
   def __grayscale(self, pixel):
