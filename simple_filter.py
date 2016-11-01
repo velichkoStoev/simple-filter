@@ -10,7 +10,16 @@ if __name__ == '__main__':
   parser.add_argument('-f', '--filter', required=True, help="The name of the filter. Available filters: " + ', '.join(available_filters), metavar='', choices=available_filters)
   args = parser.parse_args()
 
+  print("Loading image (%s) ..." % args.path)
   image = Image.open(args.path)
+  print("Image loaded")
+
   image_filter = ImageFilter(image, args.filter)
+
+  print("Applying filter (%s)..." % args.filter)
   image_filter.applyFilter()
+  print("Filter applied.")
+
+  print("Saving the new image ...")
   image_filter.saveImage()
+  print("Image saved.")
